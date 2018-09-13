@@ -1,6 +1,5 @@
-var_2: &node_8_image circleci/node:8
-var_1: &node_10_image circleci/node:10
-var_3: &node_10_ngcontainer circleci/node:0.5.0
+var_1: &node_8_image circleci/node:8
+var_2: &node_10_image circleci/node:10
 
 version: 2
 jobs:
@@ -8,25 +7,19 @@ jobs:
     docker:
       - image: *node_8_image
     steps:
+      - checkout
       - run: ./runner.sh
 
   benchmark-node-10:
     docker:
-      - image: *node_8_image
+      - image: *node_10_image
     steps:
-      - run: ./runner.sh
-
-  benchmark-node-10-ng-container:
-    docker:
-      - image: *node_10_ngcontainer
-    steps:
-      - run: npm install --global npm@6
+      - checkout
       - run: ./runner.sh
 
 workflows:
   version: 2
   default_workflow:
     jobs:
-      - benchmark-node-10-ng-container
       - benchmark-node-10
       - benchmark-node-8
