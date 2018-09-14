@@ -28,11 +28,6 @@ echo "-----------------------------------------------------------"
 cp package-ng-7-ts-3-0.json package.json
 setup_and_benchmark
 
-echo -e "\n-----------------------------------------------------------"
-echo "Benchmarking using TypeScript 3, Angular 7 & Angular CLI 6"
-echo "------------------------------------------------------"
-cp package-ng-7-ts-3-0.json package.json
-setup_and_benchmark
 
 echo -e "\n-----------------------------------------------------------"
 echo "Benchmarking using TypeScript 2.9, Angular 7 & Angular CLI 6"
