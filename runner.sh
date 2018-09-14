@@ -8,8 +8,6 @@ setup_and_benchmark() {
     node_modules/.bin/benchmark -- npm run build -- --prod
 }
 
-npm i --no-package-lock
-
 echo -e "\n-----------------------------------------------------------"
 echo "Benchmarking using TypeScript 2.9, Angular 6 & Angular CLI 6"
 echo "-----------------------------------------------------------"
