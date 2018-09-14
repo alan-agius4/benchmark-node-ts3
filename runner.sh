@@ -3,6 +3,7 @@
 setup_and_benchmark() {
     rm -rf node_modules/@angular node_modules/typescript node_modules/@angular-devkit node_modules/@ngtools/webpack node_modules/rxjs
     npm i --loglevel error --no-audit --no-package-lock
+    npm list typescript
     node_modules/.bin/benchmark -- npm run build -- --prod
 }
 
