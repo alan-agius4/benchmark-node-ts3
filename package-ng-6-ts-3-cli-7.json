@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "build-clean": "rm -rf node_modules/.cache && npm run build -- --prod",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
