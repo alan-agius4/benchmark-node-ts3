@@ -5,7 +5,7 @@ setup_and_benchmark() {
     rm -rf node_modules
     npm i --loglevel error --no-audit --no-package-lock
     npm list typescript
-    node_modules/.bin/benchmark -- npm run build -- --prod --build-optimizer=false
+    node_modules/.bin/benchmark -- npm run build -- --prod
 }
 
 echo -e "\n-----------------------------------------------------------"
