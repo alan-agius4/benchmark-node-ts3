@@ -14,12 +14,6 @@ echo "-----------------------------------------------------------"
 cp package-ng-7-ts-2-9-cli-7.json package.json
 setup_and_benchmark
 
-# echo -e "\n-----------------------------------------------------------"
-# echo "Benchmarking using TypeScript 2.9, Angular 7 & Angular CLI 7"
-# echo "-----------------------------------------------------------"
-# cp package-ng-7-ts-2-9-cli-7.json package.json
-# setup_and_benchmark
-
 echo -e "\n-----------------------------------------------------------"
 echo "Benchmarking using TypeScript 2.9, Angular 6 & Angular CLI 6"
 echo "-----------------------------------------------------------"
