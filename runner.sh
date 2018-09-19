@@ -10,49 +10,26 @@ setup_and_benchmark() {
 
 
 echo -e "\n-----------------------------------------------------------"
-echo "Benchmarking using TypeScript 3, Angular 7 & Angular CLI 7"
+echo "Benchmarking using TypeScript 3, Angular 6 & Angular CLI 7"
 echo "-----------------------------------------------------------"
-cp package-ng-7-ts-3-0-cli-7.json package.json
+cp package-ng-7-ts-3-0-cli-7-1.json package.json
 setup_and_benchmark
 
 echo -e "\n-----------------------------------------------------------"
-echo "Benchmarking using TypeScript 2.9, Angular 7 & Angular CLI 7"
+echo "Benchmarking using TypeScript 3, Angular 7.beta.4 & Angular CLI 7"
 echo "-----------------------------------------------------------"
-cp package-ng-7-ts-2-9-cli-7.json package.json
-setup_and_benchmark
-
-echo -e "\n-----------------------------------------------------------"
-echo "Benchmarking using TypeScript 2.9, Angular 6 & Angular CLI 6"
-echo "-----------------------------------------------------------"
-cp package-ng-6-ts-2-9.json package.json
-setup_and_benchmark
-
-echo -e "\n-----------------------------------------------------------"
-echo "Benchmarking using TypeScript 2.9, Angular 6 & Angular CLI 7"
-echo "-----------------------------------------------------------"
-cp package-ng-6-ts-2-9-cli-7.json package.json
-setup_and_benchmark
-
-echo -e "\n-----------------------------------------------------------"
-echo "Benchmarking using TypeScript 3, Angular 6 & Angular CLI 6"
-echo "-----------------------------------------------------------"
-cp package-ng-6-ts-3-0.json package.json
-setup_and_benchmark
-
-echo -e "\n-----------------------------------------------------------"
-echo "Benchmarking using TypeScript 3, Angular 7 & Angular CLI 6"
-echo "------------------------------------------------------"
-cp package-ng-7-ts-3-0.json package.json
+cp package-ng-7-ts-3-0-cli-7-2.json package.json
 setup_and_benchmark
 
 echo -e "\n-----------------------------------------------------------"
 echo "Benchmarking using TypeScript 3, Angular 6 & Angular CLI 7"
-echo "------------------------------------------------------"
-cp package-ng-6-ts-3-cli-7.json package.json
+echo "-----------------------------------------------------------"
+cp package-ng-7-ts-3-0-cli-7-1.json package.json
 setup_and_benchmark
 
 echo -e "\n-----------------------------------------------------------"
-echo "Benchmarking using TypeScript 2.9, Angular 7 & Angular CLI 6"
+echo "Benchmarking using TypeScript 3, Angular 7.beta.4 & Angular CLI 7"
 echo "-----------------------------------------------------------"
-cp package-ng-7-ts-2-9.json package.json
+cp package-ng-7-ts-3-0-cli-7-2.json package.json
 setup_and_benchmark
+
