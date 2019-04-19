@@ -1,5 +1,7 @@
 #!/bin/bash
 
+npm i
+
 setup_and_benchmark() {
     # rm -rf node_modules
     # npm i --loglevel error --no-audit --no-package-lock
