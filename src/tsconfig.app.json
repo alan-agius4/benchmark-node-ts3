@@ -8,7 +8,4 @@
     "test.ts",
     "**/*.spec.ts"
   ],
-  "angularCompilerOptions": {
-    "disableTypeScriptVersionCheck": true
-  }
 }

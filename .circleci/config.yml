@@ -22,4 +22,4 @@ workflows:
   default_workflow:
     jobs:
       - benchmark-node-10
-      - benchmark-node-8
+      #- benchmark-node-8
