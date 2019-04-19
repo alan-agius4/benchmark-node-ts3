@@ -10,7 +10,7 @@ setup_and_benchmark() {
 
 
 echo -e "\n-----------------------------------------------------------"
-echo "Benchmarking using DL parrallel"
+echo "Benchmarking using DL Parallel"
 echo "-----------------------------------------------------------"
 cp overrides/browserslist src/browserslist
 setup_and_benchmark
