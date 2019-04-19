@@ -10,12 +10,6 @@ setup_and_benchmark() {
 
 
 echo -e "\n-----------------------------------------------------------"
-echo "Benchmarking using No DL"
-echo "-----------------------------------------------------------"
-setup_and_benchmark
-
-
-echo -e "\n-----------------------------------------------------------"
 echo "Benchmarking using DL parrallel"
 echo "-----------------------------------------------------------"
 cp overrides/browserslist src/browserslist
