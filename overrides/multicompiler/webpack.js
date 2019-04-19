@@ -19,11 +19,11 @@ function runWebpack(config, context, options = {}) {
     const createWebpack = options.webpackFactory || (config => rxjs_1.of(webpack(config)));
     const log = options.logging
         || ((stats, config) => context.logger.info(stats.toString(config.stats)));
-    config = webpackMerge(config, {
-        plugins: [
-            new architect_2.ArchitectPlugin(context),
-        ],
-    });
+    // config = webpackMerge(config, {
+    //     plugins: [
+    //         new architect_2.ArchitectPlugin(context),
+    //     ],
+    // });
     return createWebpack(config).pipe(operators_1.switchMap(webpackCompiler => new rxjs_1.Observable(obs => {
         const callback = (err, stats) => {
             if (err) {

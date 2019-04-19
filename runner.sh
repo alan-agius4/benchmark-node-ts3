@@ -1,8 +1,8 @@
 #!/bin/bash
 
+npm i --loglevel error --no-audit --ignore-scripts
+
 setup_and_benchmark() {
-    rm -rf node_modules
-    npm i --loglevel error --no-audit --ignore-scripts
     # npm list typescript
     # npm run build-clean
     node_modules/.bin/benchmark -- npm run build-clean

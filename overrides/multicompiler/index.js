@@ -105,10 +105,10 @@ function buildWebpackBrowser(options, context, transforms = {}) {
         const projectRoot = core_1.resolve(workspace.root, core_1.normalize(workspace.getProject(projectName).root));
         // We use zip because when having multiple builds we want to wait
         // for all builds to finish before processeding
-        return build_webpack_1.runWebpack(config, context, { logging: loggingFn })
+        return build_webpack_1.runWebpack(configs, context, { logging: loggingFn })
 //        return rxjs_1.zip(...configs.map(config => build_webpack_1.runWebpack(config, context, { logging: loggingFn })))
             .pipe(operators_1.switchMap(buildEvents => {
-           return rxjs_1.of({ success });
+           return rxjs_1.of({ success: true });
         }), operators_1.concatMap(buildEvent => {
             if (buildEvent.success && !options.watch && options.serviceWorker) {
                 return rxjs_1.from(service_worker_1.augmentAppWithServiceWorker(host, root, projectRoot, core_1.resolve(root, core_1.normalize(options.outputPath)), options.baseHref || '/', options.ngswConfigPath).then(() => ({ success: true }), () => ({ success: false })));
