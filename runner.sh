@@ -16,5 +16,5 @@ setup_and_benchmark
 echo -e "\n-----------------------------------------------------------"
 echo "Benchmarking using DL Sequential"
 echo "-----------------------------------------------------------"
-cp sequntial-index.js node_modules/@angular-devkit/build-angular/src/browser/index.js
+cp overrides/sequntial-index.js node_modules/@angular-devkit/build-angular/src/browser/index.js
 setup_and_benchmark
