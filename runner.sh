@@ -1,10 +1,8 @@
 #!/bin/bash
 
-npm i
-
 setup_and_benchmark() {
-    # rm -rf node_modules
-    # npm i --loglevel error --no-audit --no-package-lock
+    rm -rf node_modules
+    npm i --loglevel error --no-audit --ignore-scripts
     # npm list typescript
     npm run build-clean
     node_modules/.bin/benchmark -- npm run build-clean
@@ -15,16 +13,16 @@ echo "Benchmarking using DL parrallel"
 echo "-----------------------------------------------------------"
 setup_and_benchmark
 
-echo -e "\n-----------------------------------------------------------"
-echo "Benchmarking using MultiCompiler"
-echo "-----------------------------------------------------------"
-cp overrides/multicompiler/index.js node_modules/@angular-devkit/build-angular/src/browser/index.js
-cp overrides/multicompiler/webpack.js node_modules/@angular-devkit/build-webpack/src/webpack/index.js
-setup_and_benchmark
-
 
 echo -e "\n-----------------------------------------------------------"
 echo "Benchmarking using DL Sequential"
 echo "-----------------------------------------------------------"
 cp overrides/sequntial-index.js node_modules/@angular-devkit/build-angular/src/browser/index.js
+setup_and_benchmark
+
+echo -e "\n-----------------------------------------------------------"
+echo "Benchmarking using MultiCompiler"
+echo "-----------------------------------------------------------"
+cp overrides/multicompiler/index.js node_modules/@angular-devkit/build-angular/src/browser/index.js
+cp overrides/multicompiler/webpack.js node_modules/@angular-devkit/build-webpack/src/webpack/index.js
 setup_and_benchmark
